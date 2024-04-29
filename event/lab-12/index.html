@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <input type="text">
+  <button id="add">Add</button>
+  <ul style="list-style: none;"></ul>
+
+  <script>
+    // ชี้เป้า
+    const addBtn = document.getElementById('add')
+    const input = document.querySelector('input')
+    const allList = document.querySelector('ul')
+    
+    addBtn.addEventListener('click', function() {
+      const list = document.createElement('li')
+      const task = document.createElement('task')
+      
+      task.textContent = input.value
+      list.append(task)
+      allList.append(list)
+      input.value = ""
+
+      const editBtn = document.createElement('button')
+      editBtn.textContent = 'Edit'
+      list.append(editBtn)
+
+      const delBtn = document.createElement('button')
+      delBtn.textContent = 'Del'
+      list.append(delBtn)
+
+      //ปุ่มลบ
+      delBtn.addEventListener('click',function() {
+        list.remove()
+      })
+
+      editBtn.addEventListener('click', function() {
+        const task_input = prompt("Please Edit")
+        task.textContent = task_input
+      })
+
+      task.addEventListener('click', function() {
+        task.style.textDecorationLine = "line-through"
+      })
+      
+    })
+
+    
+
+  </script>
+
+  
+</body>
+</html>

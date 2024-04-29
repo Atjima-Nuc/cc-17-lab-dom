@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ 
+  <script>
+    const ul = document.createElement('ul'); // สร้าง<ul></ul>
+    // let text = prompt("Enter something"); // string || null (กด cancel หรือ esc)
+    // // text === null || text.trim() === ''
+    // while (!(text === null || text.trim() === '')) { // ทำเรื่อยๆ จนกว่าเป็น false ถึงจะหยุด
+    //   const li = document.createElement('li') // <li></li>
+    //   li.textContent = text; //<li> user input </li>
+    //   ul.append(li) // <ul>...<li> user input </li></ul>
+    //   text = prompt("Enter something");
+    // }
+
+    while (1) {
+      const text = prompt("Enter something");
+      if (text === null || text.trim() === '') break; // if (!text || !text.trim())
+      const li = document.createElement('li')
+      li.textContent = text;
+      ul.append(li)
+    }
+
+    document.body.prepend(ul) // เอา ul เข้า dom (เข้า body)
+
+  </script>
+  
+</body>
+</html>

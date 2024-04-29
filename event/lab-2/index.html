@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<!--HTML-attribute-->
+  <!-- <form action="">
+    <input type="text">
+    <button onclick="submitClick()">Submit</button>
+  </form>
+
+  <script>
+    function submitClick() {
+      alert("Form is submitted.")
+    }
+  </script> -->
+
+
+<!-- DOM property -->
+  <!-- <form action="">
+    <input type="text">
+    <button>Submit</button>
+  </form>
+
+  <script>
+    const button = document.querySelector('button')
+    button.onclick = function() {
+      alert("Form is submitted.")
+    }
+  </script> -->
+
+<!--Event listener-->
+  <!-- <form action="">
+    <input type="text">
+    <button>Submit</button>
+  </form>
+
+  <script>
+    const button = document.querySelector('button')
+    button.addEventListener('click', function() {
+      alert("Form is submitted.")
+    }) 
+
+  </script> -->
+
+
+<!--ยกเลิก Event Handler-->
+  <form action="">
+    <input type="text">
+    <button>Submit</button>
+  </form>
+
+  <script>
+    function buttonClick() {
+      alert("Form is submitted.")
+    }
+
+    const button = document.querySelector('button')
+    button.addEventListener('click', buttonClick)
+    button.removeEventListener('click',buttonClick)
+  </script>
+
+
+
+
+</body>
+</html>
